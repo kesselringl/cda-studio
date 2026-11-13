@@ -12,6 +12,7 @@
 <iframe id="s" title="CDA Grafik-Studio" allow="clipboard-write; web-share; fullscreen"></iframe>
 <script>
 var STUDIO='https://kesselringl.github.io/cda-website/grafik-studio.html';
-document.getElementById('s').src=STUDIO+location.search+location.hash;
+// immer die neueste Version laden (GitHub Pages speichert Seiten sonst bis zu 10 Minuten zwischen)
+var q=location.search?location.search+'&':'?';document.getElementById('s').src=STUDIO+q+'v='+Date.now()+location.hash;
 </script>
 </body></html>
